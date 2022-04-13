@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Copy Star</title>
+</head>
+<body>
+    <div class="reg">
+        <form action="../php/registr.php" class="reg_aut">
+            <input class="input_reg" type="text" placeholder="ВАШЕ ИМЯ" name="name">
+            <input class="input_reg" type="text" placeholder="ВАША ФАМИЛИЯ" name="surname">
+            <input class="input_reg" type="text" placeholder="ВАШЕ ОТЧЕСТВО" name="patronymic">
+            <input class="input_reg" type="text" placeholder="ВАШ ЛОГИН" name="login">
+            <input class="input_reg" type="text" placeholder="ВАШ E-MAIL" name="e-mail">
+            <input class="input_reg" type="password" placeholder="ВАШ ПАРОЛЬ" name="password">
+            <input class="input_reg" type="password" placeholder="ПОВТОРИТЕ ВАШ ПАРОЛЬ" name="password_repeat">
+            <div class="chek"><input class="input_reg" type="checkbox" name="rules"> <p>Я СОГЛАСЕН С ОБРАБОТКОЙ ДАННЫХ </p></div>
+            <button class="button_aut">ЗАРЕГИСТРИРОВАТЬСЯ</button>
+        </form>
+    </div>
+    <script>
+            function check() {
+              var inp1 = document.getElementById('name'),
+                  inp2 = document.getElementById('surname'),
+                  inp3 = document.getElementById('patronymic');
+                  inp4 = document.getElementById('login'),
+                  inp5 = document.getElementById('e-mail'),
+                  inp6 = document.getElementById('password');
+                  inp7 = document.getElementById('password_repeat'),
+                  inp8 = document.getElementById('rules'),
+              document.getElementById('send').disabled = inp1.value && inp2.value && inp3.value && inp4.value && inp5.value && inp6.value && inp7.value ? false : "disabled";
+            }
+    </script>
+</body>
+</html>
